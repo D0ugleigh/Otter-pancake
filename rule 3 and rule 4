@@ -1,0 +1,30 @@
+
+
+import math
+###################
+# This function to solve alpha is solved using delta_L = alpha*Length*delta_Temperature #
+
+
+def alpha_solver (length, change_in_length, change_in_temperature):
+    Alpha = (change_in_length/length*change_in_temperature)
+    return Alpha
+
+
+# This Function for rule3 is solved in terms of constants A,B. Where if Q = A + B or
+# Q = A - B, then the error_in_Q = sqrt((error_in_A)^2) + (error_in_B)^2)#
+
+
+def rule3_solver (error_in_A, error_in_B):
+    rule3 = math.sqrt((error_in_A**2) + (error_in_B**2))
+    return rule3
+
+# This function for rule4 is solved in terms of constants c,m, and n. where Q=(cA^m)(B^n).
+# error_in_Q = sqrt((m*(error_in_A/A))^2 + (n*(error_in_B/B))^2)#
+
+
+def rule4_solver (error_in_A,A,error_in_B,B,m,n):
+    rule4 = math.sqrt((m*(error_in_A/A))**2 + (n*(error_in_B/B))**2)
+    return rule4
+
+
+
